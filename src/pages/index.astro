@@ -1,17 +1,26 @@
 ---
-import "../styles/global.css";
 import Layout from "../layouts/Layout.astro";
-import Navigation from "../components/Navigation.astro";
-// import Card from "../components/Card.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
 ---
 
 <Layout title="Mi primer blog.">
-  <Navigation />
+  <Header />
   <h1>Hola mundo.</h1>
   <p>este es mi rama main</p>
+  <Footer />
 </Layout>
 
 <style>
+  :root {
+    color-scheme: dark light;
+  }
+  html {
+    font-family: system-ui, sans-serif;
+    background: #13151a;
+    background-size: 224px;
+  }
   main {
     margin: auto;
     padding: 1rem;

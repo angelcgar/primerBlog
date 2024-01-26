@@ -1,12 +1,12 @@
 ---
-import Navigation from "../components/Navigation.astro";
-import "../styles/global.css";
 import Layout from "../layouts/Layout.astro";
-// import Card from "../components/Card.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
 ---
 
 <Layout title="Mi primer blog con Astro.">
-  <Navigation />
+  <Header />
   <h1>Mi blog con Astro</h1>
   <h1>Mi blog de Astro aprendizaje</h1>
   <p>Aquí es donde publicaré sobre mi viaje de aprendizaje Astro.</p>
@@ -22,6 +22,8 @@ import Layout from "../layouts/Layout.astro";
   <p>
     Empezamos muy bien para astro, esto me gusta mucho el enrutado, que bien :)
   </p>
+
+  <Footer />
 </Layout>
 
 <style>
