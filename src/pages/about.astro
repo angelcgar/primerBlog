@@ -1,5 +1,5 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
@@ -30,8 +30,10 @@ const skillColor = "navy";
 const fontWeight = "bold";
 ---
 
-<Layout title={pageTitle}>
-  <Header />
+<Layout
+  title={pageTitle}
+  pageTitle={`Mira lo genial de Astro y Un el valor de una variable: ${pageTitle}`}
+>
   <h1>Sobre esta pagina. <br />{pageTitle}</h1>
   <p>
     Estoy trabajando en el tutorial introductorio de Astro. Esta es la segunda
@@ -73,10 +75,6 @@ const fontWeight = "bold";
   <ul>
     {skills.map((skill) => <li class="skill">{skill}</li>)}
   </ul>
-  <Footer />
-  <script>
-    import "../scripts/menu.js";
-  </script>
 </Layout>
 
 <style define:vars={{ skillColor, fontWeight }}>
